@@ -142,12 +142,12 @@ static void Animate(void)
 
     // Draw the Earth
 	// First position it around the sun
-	//		Use DayOfYear to determine its position
+	// Use DayOfYear to determine its position
     glRotatef( 360.0*DayOfYear/365.0, 0.0, 1.0, 0.0 );
     glTranslatef( 4.0, 0.0, 0.0 );
     glPushMatrix();						// Save matrix state
 	// Second, rotate the earth on its axis.
-	//		Use HourOfDay to determine its rotation.
+	// Use HourOfDay to determine its rotation.
 	glRotatef( 360.0*HourOfDay/24.0, 0.0, 1.0, 0.0 );
 	// Third, draw the earth as a wireframe sphere.
     glColor3f( 0.2, 0.2, 1.0 );
